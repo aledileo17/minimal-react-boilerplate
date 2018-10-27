@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router";
+import Grid from "@material-ui/core/Grid";
 
 class Home extends React.Component {
   state = {
@@ -23,28 +24,37 @@ class Home extends React.Component {
       return <Redirect push to="/recibir/" />;
     }
     return (
-      <div>
-        <Typography variant="title">¡Bienvenido!</Typography>
-        <p>
-          Nos ocupamos de ser el nexo entre los comercios que tienen sobrantes y
-          los puntos de distribución para los que menos tienen. Vos, ¿qué querés
-          hacer?
-        </p>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={this.handleDonarClick}
-        >
-          Dono
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={this.handleRecibirClick}
-        >
-          Recibo
-        </Button>
-      </div>
+      <Grid
+        item
+        style={{ height: "100vh" }}
+        justify="center"
+        alignItems="center"
+        container
+        direction="row"
+      >
+        <div>
+          <Typography variant="title">¡Bienvenido!</Typography>
+          <p>
+            Nos ocupamos de ser el nexo entre los comercios que tienen sobrantes
+            y los puntos de distribución para los que menos tienen. Vos, ¿qué
+            querés hacer?
+          </p>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.handleDonarClick}
+          >
+            Dono
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={this.handleRecibirClick}
+          >
+            Recibo
+          </Button>
+        </div>
+      </Grid>
     );
   }
 }

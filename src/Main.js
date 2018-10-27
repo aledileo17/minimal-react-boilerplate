@@ -9,9 +9,8 @@ import Grid from "@material-ui/core/Grid";
 
 const Main = () => (
   <Grid
-    item
-    xs={12}
-    style={{ height: "100vh" }}
+    container
+    style={{ height: "100%" }}
     justify="center"
     alignItems="center"
     container

@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 
 const Header = () => (
   <header>
-    <AppBar color="primary">
+    <AppBar color="primary" position="static">
       <nav>
         <ul className="navbarlist">
           <li>

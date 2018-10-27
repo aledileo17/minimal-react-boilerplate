@@ -9,7 +9,7 @@ import {
 
 const MyMapComponent = withGoogleMap(props => (
   <GoogleMap
-    defaultZoom={8}
+    defaultZoom={15}
     defaultCenter={{ lat: props.lat, lng: props.long }}
   >
     {props.isMarkerShown && (
