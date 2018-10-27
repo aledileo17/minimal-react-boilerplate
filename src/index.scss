@@ -8,5 +8,21 @@ body {
   div#app {
     color: #8ee4af;
     text-align: center;
+    height: 100%;
+  }
+  .navbarlist {
+    list-style: none;
+  }
+  .navbarlist li {
+    display: inline-block;
+    float: right;
+    padding: 10px 15px 24px 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  .navbarlist li a {
+    text-decoration: none;
+    color: #ffffff;
   }
 }
