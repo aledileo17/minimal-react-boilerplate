@@ -1,7 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { Card, CardMedia, CardContent } from "@material-ui/core";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  ExpansionPanelDetails
+} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import burgerportada from "./burgerportada.jpg";
 
 class CardComponent extends Component {
   render() {
@@ -9,13 +13,13 @@ class CardComponent extends Component {
       <Card style={{ display: "flex" }}>
         <CardMedia
           component="img"
-          image={burgerportada}
+          image={this.props.image}
           title="Live from space album cover"
           style={{ width: "280px", height: "186px" }}
         />
         <CardContent>
           <Typography component="h5" variant="h5">
-            Live From Space
+            {this.props.name}
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
             Mac Miller

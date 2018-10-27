@@ -2,6 +2,9 @@ import React, { Component, Fragment } from "react";
 import MyMapComponent from "./MyMapComponent";
 import Grid from "@material-ui/core/Grid";
 import CardComponent from "./CardComponent";
+import burgerportada from "./burgerportada.jpg";
+import mcdonalds from "./mcdonalds.png";
+import kfc from "./kfclogo.png";
 
 class MainMap extends Component {
   state = {
@@ -19,6 +22,21 @@ class MainMap extends Component {
   }
 
   render() {
+    const data = [
+      {
+        name: "Burger King",
+        image: burgerportada
+      },
+      {
+        name: "Mac Donalds",
+        image: mcdonalds
+      },
+      {
+        name: "KFC",
+        image: kfc
+      }
+    ];
+
     return (
       <Fragment>
         <Grid item xs={6}>
@@ -29,10 +47,15 @@ class MainMap extends Component {
               justifyContent: "flex-start"
             }}
           >
-            <CardComponent />
-            <CardComponent />
-            <CardComponent />
-            <CardComponent />
+            {data.map(data => {
+              return (
+                <CardComponent
+                  name={data.name}
+                  image={data.image}
+                  key={data.name}
+                />
+              );
+            })}
           </div>
         </Grid>
         <Grid item xs={6}>
