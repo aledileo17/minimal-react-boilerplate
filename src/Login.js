@@ -3,6 +3,7 @@ import { Button } from "@material-ui/core";
 import { Redirect } from "react-router";
 import Grid from "@material-ui/core/Grid";
 import logo from "./logo.png";
+import TextField from "@material-ui/core/TextField";
 
 class Login extends React.Component {
   state = {
@@ -41,10 +42,26 @@ class Login extends React.Component {
       >
         <img src={logo} style={{ marginBottom: "24px" }} />
         <form style={{ maxWidth: "200px" }}>
-          <label>Usuario:</label>
-          <input type="text" onChange={this.handleName} />
-          <label>Contraseña:</label>
-          <input type="password" onChange={this.handlePass} />
+          {/* <label>Usuario:</label>
+          <input type="text" onChange={this.handleName} /> */}
+
+          <TextField
+            id="standard-name"
+            label="User"
+            onChange={this.handleName}
+            margin="normal"
+          />
+
+          <TextField
+            id="standard-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+            margin="normal"
+            onChange={this.handlePass}
+          />
+          {/* <label>Contraseña:</label>
+          <input type="password" onChange={this.handlePass} /> */}
           <Button
             variant="contained"
             color="secondary"
