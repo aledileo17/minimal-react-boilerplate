@@ -24,7 +24,7 @@ class MainMap extends Component {
   render() {
     const data = [
       {
-        name: "Burger King",
+        name: "Burger King Caballito",
         image: burgerportada
       },
       {
@@ -34,6 +34,10 @@ class MainMap extends Component {
       {
         name: "KFC",
         image: kfc
+      },
+      {
+        name: "Burger King Centro",
+        image: burgerportada
       }
     ];
 
@@ -42,7 +46,7 @@ class MainMap extends Component {
         <Grid
           item
           xs={6}
-          style={{ height: "calc(100vh - 69px)", overflow: "scroll" }}
+          style={{ height: "calc(100vh - 69px)", overflowY: "scroll" }}
         >
           <div
             style={{
