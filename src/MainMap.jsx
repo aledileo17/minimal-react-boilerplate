@@ -25,19 +25,23 @@ class MainMap extends Component {
     const data = [
       {
         name: "Burger King Caballito",
-        image: burgerportada
+        image: burgerportada,
+        numero: 500
       },
       {
         name: "Mac Donalds",
-        image: mcdonalds
+        image: mcdonalds,
+        numero: 300
       },
       {
         name: "KFC",
-        image: kfc
+        image: kfc,
+        numero: 700
       },
       {
         name: "Burger King Centro",
-        image: burgerportada
+        image: burgerportada,
+        numero: 400
       }
     ];
 
@@ -61,6 +65,7 @@ class MainMap extends Component {
                   name={data.name}
                   image={data.image}
                   key={data.name}
+                  numero={data.numero}
                 />
               );
             })}

@@ -26,8 +26,13 @@ class CardComponent extends Component {
           <Typography variant="subtitle1" color="textSecondary">
             Alimentando a <b>{this.props.numero}+</b> por día.
           </Typography>
-          <Chip variant="outlined" label="Comidas Rápidas" />
+          <Chip
+            style={{ marginTop: "15px" }}
+            variant="outlined"
+            label="Comidas Rápidas"
+          />
           <LinearProgress
+            style={{ marginTop: "15px" }}
             variant="determinate"
             color="secondary"
             value={Math.random() * (100 - 1) + 1}
