@@ -25,8 +25,8 @@ class MainMap extends Component {
 
           <Grid item xs={12}>
             <MyMapComponent
-              lat={this.state.lat || 1}
-              long={this.state.long || 1}
+              lat={this.state.lat}
+              long={this.state.long}
               isMarkerShown
               googleMapURL={`http://maps.googleapis.com/maps/api/js?key=${
                 this.state.apiKey

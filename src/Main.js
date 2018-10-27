@@ -21,7 +21,7 @@ const Main = () => (
       <Route exact path="/" component={Home} />
       <Route path="/donar" component={Donar} />
       <Route path="/recibir" component={Recibir} />
-            <Route path="/login" component={Login} />
+      <Route path="/login" component={Login} />
       <Route path="/map" component={MainMap} />
     </Switch>
   </Grid>

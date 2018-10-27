@@ -8,7 +8,10 @@ const Header = () => (
       <nav>
         <ul className="navbarlist">
           <li>
-            <Link to="/login/">Login</Link>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/map">Mapa</Link>
           </li>
           <li>
             <Link to="/">Home</Link>
