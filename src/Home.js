@@ -4,6 +4,8 @@ import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router";
 import Grid from "@material-ui/core/Grid";
+import logo from "./logo.png";
+import home from "./home.jpg";
 
 class Home extends React.Component {
   state = {
@@ -24,36 +26,56 @@ class Home extends React.Component {
       return <Redirect push to="/recibir/" />;
     }
     return (
-      <Grid
-        item
-        style={{ height: "100vh" }}
-        justify="center"
-        alignItems="center"
-        container
-        direction="row"
-      >
-        <div>
+      <Grid container style={{ display: "flex" }}>
+        <Grid
+          item
+          xs={6}
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            padding: "32px"
+          }}
+        >
+          <img src={logo} />
           <Typography variant="title">¡Bienvenido!</Typography>
           <p>
             Nos ocupamos de ser el nexo entre los comercios que tienen sobrantes
             y los puntos de distribución para los que menos tienen. Vos, ¿qué
             querés hacer?
           </p>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={this.handleDonarClick}
-          >
-            Dono
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={this.handleRecibirClick}
-          >
-            Recibo
-          </Button>
-        </div>
+          <div>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={this.handleDonarClick}
+              style={{ marginRight: "24px" }}
+            >
+              Dono
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              onClick={this.handleRecibirClick}
+            >
+              Recibo
+            </Button>
+          </div>
+        </Grid>
+        <Grid item xs={6}>
+          <div
+            style={{
+              background: `url(${home})`,
+              width: "50vw",
+              height: "calc(100vh - 69px)",
+              backgroundSize: "cover",
+              backgroundPosition: "center center"
+            }}
+          />
+        </Grid>
       </Grid>
     );
   }
