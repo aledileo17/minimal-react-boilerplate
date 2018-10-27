@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Minimal Boilerplate for React</h1>
+        <h1> Holis</h1>
       </Fragment>
     );
   }

@@ -1,5 +1,9 @@
 body {
-  background-color: #222;
+  background: url("./fondo2.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-attachment: fixed;
   font-family: Roboto, sans-serif;
   div#app {
     color: #8ee4af;
