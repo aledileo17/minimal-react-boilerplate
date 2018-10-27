@@ -33,7 +33,7 @@ class Home extends React.Component {
             padding: "32px"
           }}
         >
-          <img src={logo} />
+          {/* <img src={logo} /> */}
           <Typography variant="title">¡Bienvenido!</Typography>
           <p>
             Nos ocupamos de ser el nexo entre los comercios que tienen sobrantes

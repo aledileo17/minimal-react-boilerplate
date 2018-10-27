@@ -40,7 +40,7 @@ class Login extends React.Component {
         container
         direction="row"
       >
-        <img src={logo} style={{ marginBottom: "24px" }} />
+        {/* <img src={logo} style={{ marginBottom: "24px" }} /> */}
         <form style={{ maxWidth: "200px" }}>
           {/* <label>Usuario:</label>
           <input type="text" onChange={this.handleName} /> */}
