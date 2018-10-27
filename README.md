@@ -1,6 +1,6 @@
 # Minimal React Boilerplate
 
-This is yet another React Boilerplate built with Webpack. It provides support for Hot Module Replacement, .scss files and the Class properties proposal
+This is yet another React Boilerplate built with Webpack. It provides support for Hot Module Replacement, .scss files and the Class properties proposal.
 
 ## Specs
 
