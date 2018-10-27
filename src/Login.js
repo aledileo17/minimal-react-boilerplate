@@ -53,6 +53,16 @@ class Login extends React.Component {
           >
             Log in
           </Button>
+          <div style={{ marginTop: "24px" }}>
+            ¿No tenés usuario?
+            <Button
+              variant="contained"
+              color="primary"
+              style={{ marginTop: "8px" }}
+            >
+              Registrate
+            </Button>
+          </div>
         </form>
       </Grid>
     );

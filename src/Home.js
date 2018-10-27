@@ -9,22 +9,17 @@ import home from "./home.jpg";
 
 class Home extends React.Component {
   state = {
-    redirectDonar: false,
-    redirectRecibir: false
+    redirect: false
   };
-  handleDonarClick = () => {
-    this.setState({ redirectDonar: true });
+  handleClick = () => {
+    this.setState({ redirect: true });
   };
-  handleRecibirClick = () => {
-    this.setState({ redirectRecibir: true });
-  };
+
   render() {
-    if (this.state.redirectDonar) {
-      return <Redirect push to="/donar/" />;
+    if (this.state.redirect) {
+      return <Redirect push to="/login/" />;
     }
-    if (this.state.redirectRecibir) {
-      return <Redirect push to="/recibir/" />;
-    }
+
     return (
       <Grid container style={{ display: "flex" }}>
         <Grid
@@ -50,7 +45,7 @@ class Home extends React.Component {
               variant="contained"
               color="primary"
               size="large"
-              onClick={this.handleDonarClick}
+              onClick={this.handleClick}
               style={{ marginRight: "24px" }}
             >
               Dono
@@ -59,7 +54,7 @@ class Home extends React.Component {
               variant="contained"
               color="secondary"
               size="large"
-              onClick={this.handleRecibirClick}
+              onClick={this.handleClick}
             >
               Recibo
             </Button>
