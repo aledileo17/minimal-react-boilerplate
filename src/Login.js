@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import { Redirect } from "react-router";
+import Grid from "@material-ui/core/Grid";
+import logo from "./logo.png";
 
 class Login extends React.Component {
   state = {
@@ -24,15 +26,35 @@ class Login extends React.Component {
       return <Redirect push to="/map/" />;
     }
     return (
-      <form style={{ maxWidth: "200px" }}>
-        <label>Usuario:</label>
-        <input type="text" onChange={this.handleName} />
-        <label>Contraseña:</label>
-        <input type="password" onChange={this.handlePass} />
-        <Button variant="contained" color="secondary" onClick={this.handleForm}>
-          Log in
-        </Button>
-      </form>
+      <Grid
+        item
+        xs={12}
+        style={{
+          height: "calc(100vh - 69px)",
+          maxWidth: "200px"
+        }}
+        justify="center"
+        alignItems="center"
+        alignContent="center"
+        container
+        direction="row"
+      >
+        <img src={logo} style={{ marginBottom: "24px" }} />
+        <form style={{ maxWidth: "200px" }}>
+          <label>Usuario:</label>
+          <input type="text" onChange={this.handleName} />
+          <label>Contraseña:</label>
+          <input type="password" onChange={this.handlePass} />
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={this.handleForm}
+            style={{ marginTop: "24px" }}
+          >
+            Log in
+          </Button>
+        </form>
+      </Grid>
     );
   }
 }

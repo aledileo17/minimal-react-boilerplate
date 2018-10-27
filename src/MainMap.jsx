@@ -38,8 +38,12 @@ class MainMap extends Component {
     ];
 
     return (
-      <Fragment>
-        <Grid item xs={6}>
+      <Grid container style={{ display: "flex" }}>
+        <Grid
+          item
+          xs={6}
+          style={{ height: "calc(100vh - 69px)", overflow: "scroll" }}
+        >
           <div
             style={{
               display: "flex",
@@ -69,13 +73,13 @@ class MainMap extends Component {
               }&v=3.exp&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={
-                <div style={{ height: `100vh`, width: "50vw" }} />
+                <div style={{ height: `calc(100vh - 69px)`, width: "50vw" }} />
               }
               mapElement={<div style={{ height: `100%` }} />}
             />
           )}
         </Grid>
-      </Fragment>
+      </Grid>
     );
   }
 }
