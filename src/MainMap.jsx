@@ -21,20 +21,28 @@ class MainMap extends Component {
     return (
       <Fragment>
         <Grid container>
-          <Grid item xs={12} />
+          <Grid item xs={12}>
+            Test
+          </Grid>
 
           <Grid item xs={12}>
-            <MyMapComponent
-              lat={this.state.lat}
-              long={this.state.long}
-              isMarkerShown
-              googleMapURL={`http://maps.googleapis.com/maps/api/js?key=${
-                this.state.apiKey
-              }&v=3.exp&libraries=geometry,drawing,places`}
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            {this.state.lat && (
+              <MyMapComponent
+                lat={this.state.lat}
+                long={this.state.long}
+                isMarkerShown
+                googleMapURL={`http://maps.googleapis.com/maps/api/js?key=${
+                  this.state.apiKey
+                }&v=3.exp&libraries=geometry,drawing,places`}
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={
+                  <div
+                    style={{ height: `100vh`, width: "50vw", float: "right" }}
+                  />
+                }
+                mapElement={<div style={{ height: `100%` }} />}
+              />
+            )}
           </Grid>
         </Grid>
       </Fragment>
