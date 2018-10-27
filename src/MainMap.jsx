@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import MyMapComponent from "./MyMapComponent";
 import Grid from "@material-ui/core/Grid";
+import CardComponent from "./CardComponent";
 
 class MainMap extends Component {
   state = {
@@ -20,10 +21,21 @@ class MainMap extends Component {
   render() {
     return (
       <Fragment>
-        <Grid item xs={1}>
-          Test
+        <Grid item xs={6}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start"
+            }}
+          >
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+          </div>
         </Grid>
-        <Grid item xs={1}>
+        <Grid item xs={6}>
           {this.state.lat && (
             <MyMapComponent
               lat={this.state.lat}
