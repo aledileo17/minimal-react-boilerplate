@@ -29,13 +29,13 @@ class CardComponent extends Component {
           <Chip
             style={{ marginTop: "15px" }}
             variant="outlined"
-            label="Comidas Rápidas"
+            label={this.props.comidas}
           />
           <LinearProgress
             style={{ marginTop: "15px" }}
             variant="determinate"
             color="secondary"
-            value={Math.random() * (100 - 1) + 1}
+            value={this.props.numero / 10}
           />
         </CardContent>
       </Card>
